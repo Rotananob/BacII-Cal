@@ -1,0 +1,425 @@
+/* ======================================================= */
+/* 1. ពណ៌មូលដ្ឋាន, ពុម្ពអក្សរ និងចលនា (Global Styles) */
+/* ======================================================= */
+:root {
+    --primary-color: #4A148C; /* ស្វាយងងឹត (Deep Purple) - ពណ៌ប្រណិត */
+    --secondary-color: #FFD600; /* មាសភ្លឺ (Vibrant Gold) - ពណ៌សង្កត់ធ្ងន់ */
+    --background-light: #f5f5f5; /* ផ្ទៃខាងក្រោយស្រាល */
+    --background-dark: #333;
+    --text-dark: #212121; /* ខ្មៅងងឹត */
+    --text-light: #fff; /* ស */
+    --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.1);
+    --radius-large: 16px;
+}
+
+body {
+    font-family: 'Khmer OS Battambang', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Containers */
+.calculator-section, .result-section {
+    background-color: var(--text-light);
+    padding: 40px;
+    border-radius: var(--radius-large);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-soft);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.note {
+    background-color: #f3e5f5; 
+    color: var(--primary-color);
+    font-size: 0.9em;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+
+/* ======================================================= */
+/* 2. Header & Logo Styling */
+/* ======================================================= */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 35px 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-large) var(--radius-large) 0 0;
+}
+
+.header-logo {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    margin-bottom: 15px; 
+    border: 5px solid var(--secondary-color);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.5, 1);
+}
+
+.header-logo:hover {
+    transform: rotate(360deg) scale(1.05); 
+}
+
+.header h1 {
+    font-size: 2.8em;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* 🔥 NEW: Name Input Styling */
+.name-input-group {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-light);
+}
+
+.name-input-group label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 10px;
+}
+
+#userName {
+    width: 70%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-dark);
+    transition: all 0.3s;
+}
+
+#userName:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(74, 20, 140, 0.2);
+    outline: none;
+}
+
+/* ======================================================= */
+/* 3. Major Selection */
+/* ======================================================= */
+.major-selection {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+    flex-wrap: wrap; 
+}
+
+.major-selection input[type="radio"] {
+    display: none;
+}
+
+.major-selection label {
+    padding: 15px 35px;
+    border: 3px solid var(--primary-color);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 250px;
+}
+
+.major-selection input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 10px 20px rgba(74, 20, 140, 0.4);
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* ======================================================= */
+/* 4. Score Input Table & Grades */
+/* ======================================================= */
+.score-input-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score-input-table th, .score-input-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.score-input-table thead th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.score-input-table tbody tr:hover {
+    background-color: #f3e5f5; 
+}
+
+.score-input {
+    width: 90px;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: all 0.3s;
+}
+
+.score-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(255, 214, 0, 0.4);
+    outline: none;
+}
+
+/* Subject Grade Display (Scratch-off) */
+.subject-grade-display {
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    min-width: 55px;
+    display: inline-block;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pending-grade {
+    background-image: linear-gradient(145deg, #7b1fa2 0%, #4a148c 100%); 
+    color: #7b1fa2; 
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.3); 
+    border: 1px solid #4a148c; 
+}
+
+/* Grade Colors (High Contrast) */
+.subject-grade-display.A { background-color: #4CAF50; color: var(--text-light); }
+.subject-grade-display.B { background-color: #8BC34A; color: var(--text-light); }
+.subject-grade-display.C { background-color: #FFEB3B; color: var(--text-dark); } 
+.subject-grade-display.D { background-color: #FF9800; color: var(--text-light); }
+.subject-grade-display.E { background-color: #E53935; color: var(--text-light); }
+.subject-grade-display.F { background-color: #616161; color: var(--text-light); } 
+
+
+/* ======================================================= */
+/* 5. Buttons */
+/* ======================================================= */
+.button-group {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-group button {
+    padding: 15px 35px;
+    margin: 0 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.button-group button:first-child { 
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(255, 214, 0, 0.5);
+}
+
+.button-group button:first-child:hover {
+    background-color: #ffc107;
+    transform: translateY(-5px) scale(1.03); 
+    box-shadow: 0 12px 25px rgba(255, 214, 0, 0.7);
+}
+
+.clear-button {
+    background-color: #e0e0e0;
+    color: #757575;
+}
+
+.clear-button:hover {
+    background-color: #bdbdbd;
+    transform: translateY(-2px);
+}
+
+/* ======================================================= */
+/* 6. Result Display (Final Look with Color Background) */
+/* ======================================================= */
+#resultDisplay {
+    /* ប្រើ Gradient Background */
+    background-image: linear-gradient(145deg, #fce4ec 0%, #fffde7 100%); 
+    border: 4px solid var(--primary-color); 
+    border-radius: var(--radius-large);
+    
+    opacity: 0;
+    transform: scale(0.9);
+    animation: resultPopUp 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s forwards;
+    box-shadow: 0 10px 30px rgba(74, 20, 140, 0.3);
+}
+
+@keyframes resultPopUp {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Notification Messages (WITH Background Color) */
+.notification-message {
+    font-size: 2em;
+    font-weight: 900;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-light); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.notification-message.success-message {
+    background-color: #43A047; /* ពណ៌បៃតងជាប់ */
+    border: 3px solid #66BB6A;
+}
+
+.notification-message.failure-message {
+    background-color: #E53935; /* ពណ៌ក្រហមធ្លាក់ */
+    border: 3px solid #EF5350;
+}
+
+.notification-message p {
+    font-size: 0.5em; 
+    font-weight: 500; 
+    margin-top: 10px;
+    line-height: 1.4;
+    color: white; /* ធានាថាដំបូន្មានមានពណ៌ស */
+}
+
+.summary-box {
+    background-color: var(--text-light);
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.final-result {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.final-result p {
+    font-size: 1.3em;
+    font-weight: 600;
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+.final-result strong {
+    font-size: 2.2em; 
+    padding: 10px 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); 
+    min-width: 120px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+}
+
+/* FIXED CONTRAST for Final Grades */
+#passStatus.A, #finalGrade.A { background-color: #28a745; color: var(--text-light); }
+#passStatus.B, #finalGrade.B { background-color: #8BC34A; color: var(--text-light); }
+#passStatus.C, #finalGrade.C { background-color: #FFEB3B; color: var(--text-dark); }
+#passStatus.D, #finalGrade.D { background-color: #FF9800; color: var(--text-light); }
+#passStatus.E, #finalGrade.E { background-color: #E53935; color: var(--text-light); }
+#passStatus.F, #finalGrade.F { background-color: #616161; color: var(--text-light); }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-dark);
+    color: #bdbdbd;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ======================================================= */
+/* 7. MEDIA QUERIES (RESPONSIVE DESIGN) */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+    .container { margin: 20px 10px; padding: 10px; }
+    .calculator-section, .result-section { padding: 20px; }
+    .header h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; padding-bottom: 10px; }
+
+    /* Fix: លាក់តែ មេគុណ (nth-child(3)) */
+    .score-input-table th:nth-child(3),
+    .score-input-table td:nth-child(3) { display: none; }
+
+    .score-input-table th, .score-input-table td { padding: 10px 5px; font-size: 0.9em; }
+    .score-input { width: 60px; padding: 8px; }
+    .major-selection { gap: 10px; }
+    .major-selection label { padding: 12px 15px; font-size: 0.9em; }
+    
+    .button-group button {
+        padding: 12px 20px;
+        margin: 10px 0;
+        font-size: 1em;
+        width: 100%;
+        display: block; 
+    }
+    .final-result strong { font-size: 2em; }
+    .notification-message { font-size: 1.5em; }
+}
+
+@media (max-width: 480px) {
+    .major-selection { flex-direction: column; align-items: center; }
+    .major-selection label { max-width: 100%; width: 80%; }
+}

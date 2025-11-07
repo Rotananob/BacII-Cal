@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គណនាលទ្ធផលប្រឡងបាក់ឌុប</title>
+    <link rel="stylesheet" href="src/style.css"> 
+    <link rel="icon" href="src/icon.jpg">
+</head>
+<body>
+    <header class="header">
+        <img src="src/icon.jpg" alt="Logo ម៉ាស៊ីនគណនា" class="header-logo">
+        
+        <h1>🇰🇭 ម៉ាស៊ីនគណនាប៉ាន់ស្មានលទ្ធផលប្រឡងបាក់ឌុប </h1>
+        <p>សម្រាប់ថ្នាក់ទី ១២ - ថ្នាក់ វិទ្យាសាស្ត្រ និង សង្គម</p>
+    </header>
+
+    <main class="container">
+        <section class="calculator-section">
+            
+            <h2>ជំហានទី ១៖ បញ្ចូលឈ្មោះ</h2>
+            <div class="name-input-group">
+                <label for="userName">ឈ្មោះរបស់អ្នក (Username):</label>
+                <input type="text" id="userName" placeholder="ឧទាហរណ៍: រតនា" required>
+            </div>
+            
+            <h2>ជំហានទី ២៖ ជ្រើសរើសប្រភេទថ្នាក់</h2>
+            <div class="major-selection">
+                <input type="radio" id="science" name="major" value="science" checked onchange="loadSubjects()">
+                <label for="science">ថ្នាក់ វិទ្យាសាស្ត្រ</label>
+                <input type="radio" id="social" name="major" value="social" onchange="loadSubjects()">
+                <label for="social">ថ្នាក់ វិទ្យាសាស្ត្រសង្គម</label>
+            </div>
+
+            <h2>ជំហានទី ៣៖ បញ្ចូលពិន្ទុតាមមុខវិជ្ជា</h2>
+            <p class="note">សូមបញ្ចូលពិន្ទុដែលអ្នកទទួលបាន (ឬអ្នករំពឹងថានឹងទទួលបានបន្ទាប់ពីប្រឡងចប់​)។ </p>
+            <table class="score-input-table">
+                <thead>
+                    <tr>
+                        <th>មុខវិជ្ជា</th>
+                        <th>ពិន្ទុពេញ (Max)</th>
+                        <th>មេគុណនៃមុខវិជ្ជា</th>    
+                        <th>ពិន្ទុដែលទទួលបាន</th>
+                        <th class="grade-column">និទ្ទេសតាមមុខវិជ្ជា</th>
+                    </tr>
+                </thead>
+                <tbody id="subjectInputBody">
+                </tbody>
+            </table>
+
+            <div class="button-group">
+                <button onclick="calculateResults()">គណនាលទ្ធផល</button>
+                <button class="clear-button" onclick="clearData()">សម្អាតទិន្នន័យ (Clear)</button>
+            </div>
+        </section>
+
+        <section id="resultDisplay" class="result-section" style="display:none;">
+            <h2 id="finalNotification" class="notification-message"></h2>
+
+            <h2>📊 លទ្ធផលសរុប</h2>
+            <div class="summary-box">
+                <p>ពិន្ទុសរុប: <strong id="totalScoreDisplay">0</strong> / 475 </p>
+                <div class="final-result">
+                    <p>សភាព: <strong id="passStatus" class="F">មិនទាន់គណនា</strong></p>
+                    <p>និទ្ទេសសរុប: <strong id="finalGrade" class="F">N/A</strong></p>
+                </div>
+            </div>
+            
+            <p class="footer-note">លទ្ធផលនេះគ្រាន់តែជាការគណនាសាកល្បងប៉ុណ្ណោះ។ លទ្ធផលផ្លូវការផ្អែកលើការប្រកាសរបស់ ក្រសួងអប់រំ យុវជន និងកីឡា។</p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        ©Rotana NOB ឆ្នាំ ២០២៥ | កម្មវិធីគណនាលទ្ធផលបាក់ឌុប 
+    </footer>
+
+    <script src="src/script.js"></script>
+    <script>
+        // ធានាថាមុខវិជ្ជាត្រូវបានផ្ទុកនៅពេលទំព័រផ្ទុកចប់
+        document.addEventListener('DOMContentLoaded', loadSubjects);
+    </script>
+</body>
+</html>
