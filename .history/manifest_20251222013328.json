@@ -1,0 +1,92 @@
+{
+  "name": "ម៉ាស៊ីនគណនាលទ្ធផលបាក់ឌុប",
+  "short_name": "គណនាបាក់ឌុប",
+  "description": "កម្មវិធីគណនាលទ្ធផលប្រឡងបាក់ឌុប សម្រាប់សិស្សថ្នាក់ទី១២",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#4A148C",
+  "theme_color": "#4A148C",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "km",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "src/img/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/img/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "src/img/screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "utilities"],
+  "shortcuts": [
+    {
+      "name": "គណនាលទ្ធផល",
+      "short_name": "គណនា",
+      "description": "បើកម៉ាស៊ីនគណនាភ្លាមៗ",
+      "url": "/index.html",
+      "icons": [
+        {
+          "src": "src/img/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

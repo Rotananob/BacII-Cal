@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - រកទំព័រមិនឃើញ</title>
+    
+    <style>
+        /* ======================================================= */
+        /* 1. CSS Global Styles & Fonts */
+        /* ======================================================= */
+        :root {
+            --primary-color: #00bcd4; /* Cyan */
+            --secondary-color: #ff9800; /* Orange */
+            --background-dark: #1f2739; /* ពណ៌ផ្ទៃខាងក្រោយងងឹត */
+            --text-light: #eceff1;
+        }
+
+        body {
+            font-family: 'Khmer OS Battambang', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden; /* លាក់បែបផែនដែលហៀរចេញ */
+        }
+
+        /* ======================================================= */
+        /* 2. Main Container & Glitch Effect */
+        /* ======================================================= */
+        .container-404 {
+            padding: 40px;
+            border: 3px solid var(--primary-color);
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
+            max-width: 90%;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* 💡 Glitch Animation (ចលនា) សម្រាប់លេខ 404 */
+        .glitch {
+            font-size: 8em;
+            font-weight: 900;
+            color: var(--text-light);
+            text-shadow: 
+                0.05em 0 0 #f0f,  /* ស្រមោល magenta */
+                -0.03em -0.02em 0 #0ff; /* ស្រមោល cyan */
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+            position: relative;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        /* Keyframes សម្រាប់ Glitch */
+        @keyframes glitch-anim {
+            0% {
+                text-shadow: 0.05em 0 0 #f0f, -0.05em -0.02em 0 #0ff;
+                transform: translate(0.02em, 0.02em) skewX(-5deg);
+            }
+            25% {
+                text-shadow: -0.05em 0 0 #f0f, 0.05em 0.02em 0 #0ff;
+                transform: translate(-0.01em, -0.02em) skewX(2deg);
+            }
+            50% {
+                text-shadow: 0 0.05em 0 #f0f, -0.02em -0.05em 0 #0ff;
+                transform: translate(0.01em, 0) skewX(-1deg);
+            }
+            75% {
+                text-shadow: 0 -0.05em 0 #f0f, 0.01em 0.05em 0 #0ff;
+                transform: translate(-0.02em, 0.02em) skewX(4deg);
+            }
+            100% {
+                text-shadow: 0.05em 0 0 #f0f, -0.03em -0.02em 0 #0ff;
+                transform: translate(0.02em, -0.01em) skewX(-2deg);
+            }
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 2em;
+            margin-top: 10px;
+            animation: text-shake 0.5s infinite alternate; /* ចលនាអក្សរ */
+        }
+        
+        @keyframes text-shake {
+            from { transform: translateX(-1px); }
+            to { transform: translateX(1px); }
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 20px 0;
+            opacity: 0.8;
+        }
+
+        /* ======================================================= */
+        /* 3. Button and Navigation */
+        /* ======================================================= */
+        .home-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--background-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+        }
+
+        .home-button:hover {
+            background-color: #0097a7;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6);
+        }
+
+        /* ======================================================= */
+        /* 4. Responsive Design (សម្រាប់ទូរស័ព្ទ) */
+        /* ======================================================= */
+        @media (max-width: 600px) {
+            .glitch {
+                font-size: 5em;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .home-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-404">
+        <p class="glitch">404</p>
+        <h1>សុំទោស! រកទំព័រនេះមិនឃើញទេ!</h1>
+        <p>ប្រហែលជាមានការផ្លាស់ប្តូរទីតាំង ឬ Link ត្រូវបានវាយខុស។</p>
+        <a href="/" class="home-button">ត្រឡប់ទៅទំព័រដើម</a>
+    </div>
+
+    
+</body>
+</html>

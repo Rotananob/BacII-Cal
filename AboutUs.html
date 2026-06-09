@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>អំពីយើង - ម៉ាស៊ីនគណនាលិទ្ធផលបាក់ឌុប</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" href="src/img/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ======================================================= */
+        /* 1. CSS Global Styles & Color Variables (Matching Main UI) */
+        /* ======================================================= */
+        :root {
+            --primary-color: #4A148C; /* ស្វាយងងឹត (Deep Purple) */
+            --secondary-color: #0ec55a; /* មាសភ្លឺ (Vibrant Gold) */
+            --background-light: #f5f5f5;
+            --text-dark: #212121;
+            --text-light: #fff;
+            --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --radius-large: 16px;
+        }
+
+        body {
+            font-family: 'Khmer OS Battambang', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            width: 100%;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ======================================================= */
+        /* 2. Header & Navigation (Minimal Nav) */
+        /* ======================================================= */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+        }
+
+
+        /* ======================================================= */
+        /* 3. About Section Styling */
+        /* ======================================================= */
+        .about-section {
+            background-color: var(--text-light);
+            padding: 40px;
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-soft);
+            margin-top: 20px;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .mission-vision {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap; /* Responsive */
+        }
+
+        .mission-vision div {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .mission-vision div:hover {
+            transform: translateY(-5px); /* Animation on hover */
+        }
+
+        .mission-vision h3 {
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            border-bottom: 2px dashed var(--primary-color);
+            padding-bottom: 5px;
+        }
+        
+        .mission-box {
+            background-color: #e3f2fd; /* Light Blue */
+        }
+        
+        .vision-box {
+            background-color: #f3e5f5; /* Light Purple */
+        }
+
+        .team-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .member-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-soft);
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .member-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .member-card h4 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .member-card p {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin: 5px 0 0 0;
+        }
+
+        /* ======================================================= */
+        /* 4. Footer Styling */
+        /* ======================================================= */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: #bdbdbd;
+            font-size: 0.9em;
+            margin-top: 40px;
+            width: 100%;
+        }
+        
+        /* ======================================================= */
+        /* 5. Responsive Adjustments */
+        /* ======================================================= */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .about-section {
+                padding: 20px;
+            }
+
+            .mission-vision {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .member-card {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>អំពីកម្មវិធីរបស់យើង</h1>
+        <div class="nav-links">
+            <a href="index.html">ត្រឡប់ទៅការគណនា</a>
+            <a href="AboutUs.html">អំពីយើង</a>
+            <a href="privacy-policy.html">គោលការណ៍ និង ឯកជនភាព</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="about-section">
+            <h2>💡 បេសកកម្ម និង ចក្ខុវិស័យ</h2>
+
+            <div class="mission-vision">
+                <div class="mission-box">
+                    <h3>បេសកកម្ម (Our Mission)</h3>
+                    <p>បេសកកម្មរបស់យើងគឺផ្តល់ជូននូវឧបករណ៍គណនាលទ្ធផលប្រឡងបាក់ឌុបដ៏ត្រឹមត្រូវ និងងាយស្រួលប្រើប្រាស់បំផុតសម្រាប់សិស្សានុសិស្សថ្នាក់ទី ១២ នៅទូទាំងព្រះរាជាណាចក្រកម្ពុជា។ យើងចង់ជួយសិស្សឱ្យវាយតម្លៃសមត្ថភាពរបស់ខ្លួនមុនការប្រកាសលទ្ធផលផ្លូវការ។</p>
+                </div>
+                <div class="vision-box">
+                    <h3>ចក្ខុវិស័យ (Our Vision)</h3>
+                    <p>ក្លាយជាកម្មវិធី និង គេហទំព័រគណនាលទ្ធផលដែលជាផ្នែកមួយនៃការជួលសម្រាលបន្ទុកប្អូនៗថ្នាក់ទី១២ កុំឲពិបាកស្វែងរកពត៏មាននិងពិបាកគណនា ។ ដែលពួកយើងអាចផ្តល់នូវភាពច្បាស់លាស់ ភាពជឿជាក់ និងការលើកទឹកចិត្តដល់យុវជនខ្មែរក្នុងការបន្តការសិក្សា និង ការអភិវឌ្ឍខ្លួនប្រកបដោយគុណភាព។</p>
+                </div>
+            </div>
+
+            <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+            <div class="team-section">
+                <h2>🤝 ក្រុមការងារ (Development Team)💻</h2>
+                <p>កម្មវិធី និង គេហទំព័រ នេះត្រូវបានបង្កើតឡើងដោយបងប្អូនយើង២នាក់ ដែលមានទំនូលនៃការចូលចិត្តក្នុងផ្នែកអប់រំនិងចង់ជាផ្នែកមួយនៃចូលរួមក្នុងការដោះស្រាយដល់សិស្សៗផ្នែកអប់រំនេះផងដែរ។</p>
+                
+                <div class="team-members">
+                    <div class="member-card">
+                                                                        <h4>ណុប រតនា</h4>
+                                                                        <p>23 years</p>
+                                                                         <p>ស្រុកកំណើត: កំពង់ចាម</p>
+                                                                                              <p>ទីលំនៅបច្ចប្បន្ន: ភ្នំពេញ</p>   <br>                                                  
+
+                                                                        
+
+                        <img src="src/img/rotana.JPG" alt="Rotana Profile">
+                        <h4>Rotana NOB</h4>
+                        
+                        <p>Web Developer & Project Lead & Tester & SEO.</p>
+                        <p style="color: var(--secondary-color);">ស្ថាបនិក</p>
+                    </div>
+                    
+                    <div class="member-card">
+                                                <h4>ណុប ភារម្យ</h4>
+                                                                        <p>22 years</p>
+<p>ស្រុកកំណើត: កំពង់ចាម</p>
+                                                                                              <p>ទីលំនៅបច្ចប្បន្ន: ភ្នំពេញ</p>   <br>
+
+                        <img src="src/img/Phearom.jpg" alt="Support Profile">
+                        <h4>Phearom NOB</h4>
+                        <p>UX/UI Designer  & DevOp </p>​<br>
+                        <p style="color: var(--primary-color);">អ្នករចនា និង តេស្តសុវត្ថិភាព</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <p>©Rotana NOB  | ឆ្នាំ ២០២៥ <BR>កម្មវិធីគណនាលទ្ធផលបាក់ឌុប </p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/TheRotanaNob" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/nobrotana" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.linkedin.com/in/rotana-nob-1171992a4/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/rotana__nob/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@xflow.sharing" target="_blank" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p style="margin-top: 10px; font-size: 0.85em;">Email: nobrothana180703@gamail.com</p>
+    </div>
+</footer>
+    
+</body>
+</html>

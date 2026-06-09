@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+        <link rel="icon" href="src/img/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>គោលការណ៍ឯកជនភាព - ម៉ាស៊ីនគណនាលទ្ធផលបាក់ឌុប</title>
+    
+    <style>
+        /* ======================================================= */
+        /* 1. CSS Global Styles & Color Variables (Matching Main UI) */
+        /* ======================================================= */
+        :root {
+            --primary-color: #4A148C; /* ស្វាយងងឹត (Deep Purple) */
+            --secondary-color: #FFD600; /* មាសភ្លឺ (Vibrant Gold) */
+            --background-light: #f5f5f5;
+            --text-dark: #212121;
+            --text-light: #fff;
+            --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --radius-large: 16px;
+        }
+
+        body {
+            font-family: 'Khmer OS Battambang', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            width: 100%;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ======================================================= */
+        /* 2. Header & Navigation (Matching Main UI) */
+        /* ======================================================= */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+        }
+
+        /* ======================================================= */
+        /* 3. Policy Content Styling */
+        /* ======================================================= */
+        .policy-section {
+            background-color: var(--text-light);
+            padding: 40px;
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-soft);
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .policy-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .policy-section h3 {
+            color: var(--text-dark);
+            margin-top: 30px;
+            font-size: 1.3em;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .highlight-box {
+            background-color: #f3e5f5; /* Light Purple */
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            margin-top: 20px;
+        }
+        
+        /* ======================================================= */
+        /* 4. Footer Styling */
+        /* ======================================================= */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: #bdbdbd;
+            font-size: 0.9em;
+            margin-top: 40px;
+            width: 100%;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .policy-section {
+                padding: 20px;
+            }
+            
+            .policy-section h3 {
+                font-size: 1.2em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>គោលការណ៍ឯកជនភាព</h1>
+        <div class="nav-links">
+            <a href="index.html">ត្រឡប់ទៅការគណនា</a>
+            <a href="AboutUs.html">អំពីយើង</a>
+            <a href="privacy-policy.html">គោលការណ៍ឯកជនភាព</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="policy-section">
+            <h2>🔒 គោលការណ៍ឯកជនភាព និងការគ្រប់គ្រងទិន្នន័យ</h2>
+            
+            <p>គោលការណ៍នេះពន្យល់ពីរបៀបដែល **ម៉ាស៊ីនគណនាលទ្ធផលបាក់ឌុប** (គេហទំព័រ ឬ Mobile App) គ្រប់គ្រងទិន្នន័យរបស់អ្នក។</p>
+
+            <div class="highlight-box">
+                <p style="color: var(--primary-color); font-weight: 700; margin: 0; font-size: 1.1em;">
+                    ⚡ សារសំខាន់៖ ម៉ាស៊ីនគណនានេះដំណើរការ **Offline**។ ទិន្នន័យដែលអ្នកបញ្ចូលមិនត្រូវបានបញ្ជូនទៅកាន់ Server ខាងក្រៅ ឬចែករំលែកជាមួយភាគីទីបីឡើយ។
+                </p>
+            </div>
+
+            <h3>១. ប្រភពទិន្នន័យ និងការប្រមូល</h3>
+            <p>យើងប្រមូលតែទិន្នន័យដែលអ្នកបញ្ចូលដោយផ្ទាល់ទៅក្នុងប្រអប់ Input ប៉ុណ្ណោះ៖</p>
+            <ul>
+                <li>ឈ្មោះអ្នកប្រើប្រាស់ (Username): ប្រើសម្រាប់បង្កើតសារជូនដំណឹងផ្ទាល់ខ្លួន (ឧទាហរណ៍៖ អបអរសាទរ រតនា !)។</li>
+                <li>**ពិន្ទុតាមមុខវិជ្ជា៖** ប្រើសម្រាប់តែការគណនាប៉ុណ្ណោះ។</li>
+            </ul>
+
+            <h3>២. ការប្រើប្រាស់ និងការរក្សាទុកទិន្នន័យ</h3>
+            <p>ទិន្នន័យទាំងអស់របស់អ្នកត្រូវបានគ្រប់គ្រងដោយផ្ទាល់នៅលើឧបករណ៍របស់អ្នក (Client-Side)។</p>
+            <ul>
+                <li>ដំណើរការ: ការគណនាទាំងអស់កើតឡើងនៅក្នុង Browser ឬ Mobile App របស់អ្នក។</li>
+                <li>ការរក្សាទុកបណ្តោះអាសន្ន: ឈ្មោះអ្នកប្រើប្រាស់ និងពិន្ទុរបស់អ្នកអាចត្រូវបានរក្សាទុកក្នុង **Local Storage** របស់ Browser/App ជាបណ្តោះអាសន្ន ដើម្បីឱ្យអ្នកមិនចាំបាច់បញ្ចូលឈ្មោះម្តងទៀតបន្ទាប់ពីចុច Clear Data។</li>
+                <li>អាយុកាលទិន្នន័យ: ទិន្នន័យត្រូវបានលុបចោលនៅពេលអ្នកបិទ Browser/App (Session End) ឬនៅពេលអ្នកលុបទិន្នន័យ/Cache របស់ App។</li>
+            </ul>
+
+            <h3>៣. ការអនុវត្តន៍លើ Mobile App (WebView)</h3>
+            <p>នៅពេលប្រើប្រាស់គេហទំព័រនេះតាមរយៈ Mobile App (ដូចជា Android/iOS WebView) គោលការណ៍នេះនៅតែអនុវត្តដដែល។ ព័ត៌មានដែលអ្នកបញ្ចូល:</p>
+            <ul>
+                <li>មិនឆ្លងកាត់ Server របស់ App ឡើយ។</li>
+                <li>មិនត្រូវបានតាមដាន ដោយ App Owner ឡើយ។</li>
+            </ul>
+            <p style="color: #E53935; font-weight: 600;">⚠️ កម្មវិធីរបស់យើងដាច់ខាត១០០%មិនប្រើប្រាស់ GPS, Camera, ឬ Contacts របស់អ្នកឡើយ។</p>
+            
+            <h3>៤. ការផ្លាស់ប្តូរគោលការណ៍</h3>
+            <p>យើងរក្សាសិទ្ធិក្នុងការកែប្រែគោលការណ៍ឯកជនភាពនេះគ្រប់ពេលវេលា។ យើងនឹងជូនដំណឹងដល់អ្នកតាមរយៈការដាក់បង្ហាញការផ្លាស់ប្តូរនៅលើទំព័រនេះ។</p>
+            
+            <p style="margin-top: 40px; color: var(--primary-color); font-weight: 600;">កាលបរិច្ឆេទនៃការធ្វើបច្ចុប្បន្នភាពចុងក្រោយ៖ ០៨ ខែ វិច្ឆិកា ឆ្នាំ ២០២៥</p>
+
+        </section>
+    </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <p>©Rotana NOB  | ឆ្នាំ ២០២៥ <BR>កម្មវិធីគណនាលទ្ធផលបាក់ឌុប </p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/TheRotanaNob" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/nobrotana" target="_blank" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.linkedin.com/in/rotana-nob-1171992a4/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/rotana__nob/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@xflow.sharing" target="_blank" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p style="margin-top: 10px; font-size: 0.85em;">Email: nobrothana180703@gamail.com</p>
+    </div>
+</footer>
+</body>
+</html>
