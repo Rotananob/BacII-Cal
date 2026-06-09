@@ -79,8 +79,8 @@ Built with ❤️ by two siblings from Kampong Cham, now based in Phnom Penh.
 
 | | Name | Role |
 |---|---|---|
-| 👨‍💻 | **Rotana NOB** | Web Developer · Project Lead · Tester · SEO |
-| 🎨 | **Phearom NOB** | UX/UI Designer · DevOps |
+| 👨‍💻 | **Rotana NOB** | Web Developer  · Tester · SEO |
+| 🎨 | **Phearom NOB** | UX/UI Designer |
 
 ---
 
